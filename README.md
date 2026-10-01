@@ -1,5 +1,9 @@
 # 🚀 Hub de Ferramentas Universitárias
 
+![Status](https://img.shields.io/badge/Status-Em_Desenvolvimento-green)
+![Licença](https://img.shields.io/badge/License-MIT-blue)
+![Contribuições](https://img.shields.io/badge/Contribuições-Bem_Vindas-brightgreen)
+
 Bem-vindo ao **Hub de Ferramentas Universitárias**! 🎓💻
 
 Este é um repositório colaborativo e open-source criado para mapear, centralizar e manter atualizadas as melhores licenças, créditos em nuvem (Cloud) e ferramentas de produtividade gratuitas para estudantes. 
