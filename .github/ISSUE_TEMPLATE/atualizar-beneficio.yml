@@ -1,0 +1,24 @@
+name: 🔄 Benefício mudou ou link quebrado
+description: Avise quando uma regra, limite ou link de uma página estiver desatualizado.
+title: "[ATUALIZAÇÃO] "
+labels: ["documentation"]
+body:
+  - type: input
+    id: pagina
+    attributes:
+      label: Qual página está desatualizada?
+      placeholder: "Ex: content/dev-tools/github-student-pack.md"
+    validations:
+      required: true
+  - type: textarea
+    id: mudanca
+    attributes:
+      label: O que mudou?
+      description: Descreva o que está escrito hoje e como está agora.
+    validations:
+      required: true
+  - type: input
+    id: fonte
+    attributes:
+      label: Fonte oficial da mudança
+      placeholder: https://

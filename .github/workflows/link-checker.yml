@@ -1,0 +1,28 @@
+name: Verificar links
+
+on:
+  pull_request:
+    branches: [main]
+  push:
+    branches: [main]
+  # Os benefícios estudantis mudam com frequência: toda segunda às 9h (BRT).
+  schedule:
+    - cron: "0 12 * * 1"
+  workflow_dispatch:
+
+jobs:
+  lychee:
+    name: Links dos Markdowns
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: lycheeverse/lychee-action@v2
+        with:
+          args: >-
+            --no-progress
+            --accept 200,204,206,403,429
+            --max-retries 3
+            './*.md'
+            'content/**/*.md'
+            '.github/**/*.md'
+          fail: true

@@ -1,0 +1,89 @@
+# 🤝 Como contribuir com o Hub
+
+Ficamos felizes que você queira ajudar a comunidade acadêmica! Este guia explica onde ficam as coisas, como escrever uma página nova e como enviar a sua contribuição.
+
+Ao participar, você concorda em seguir o nosso [Código de Conduta](CODE_OF_CONDUCT.md).
+
+## 🧭 Formas de ajudar
+
+- **Sugerir uma ferramenta:** abra uma [issue de sugestão](https://github.com/AnneS006/hub-google-embaixadores/issues/new/choose) — não precisa saber programar.
+- **Avisar que algo mudou:** benefícios estudantis mudam o tempo todo. Viu uma regra ou link desatualizado? Abra uma issue de atualização.
+- **Escrever ou atualizar uma página:** siga o passo a passo abaixo.
+- **Melhorar o site:** o código fica em `src/` (Next.js + Tailwind).
+
+## 📂 Onde fica cada coisa
+
+```
+content/                  ← todo o conteúdo do site, em Markdown
+├── index.md              ← página inicial
+├── cloud-e-baas/         ← cada pasta vira uma seção da barra lateral
+│   └── firebase-supabase.md
+└── dev-tools/
+    └── github-student-pack.md
+src/                      ← código do site (Next.js)
+.github/                  ← templates de issue/PR e automações (GitHub Actions)
+```
+
+A barra lateral do site é montada sozinha a partir das pastas de `content/`. Para criar uma página nova, basta criar o arquivo `.md` na pasta certa. Para criar uma categoria nova, crie uma pasta nova e adicione o nome de exibição dela em `src/lib/site.ts` (em `sectionTitles`).
+
+## 📝 Modelo de página
+
+Toda página de ferramenta deve responder a estas perguntas:
+
+1. **Nome e link oficial** da página de benefícios estudantis.
+2. **O que inclui gratuitamente** e quais são os limites do plano educacional.
+3. **Como acessar:** exige e-mail `.edu.br`? Foto da carteirinha? Vem pelo GitHub Student Pack?
+4. **Dica de uso:** como um estudante pode usar isso na prática (hackathons, TCC, portfólio).
+
+Copie este modelo para começar:
+
+```markdown
+---
+description: Uma frase resumindo o benefício (aparece nos buscadores).
+---
+
+# 🧩 Nome da Ferramenta
+
+Uma ou duas frases sobre o que é a ferramenta e por que ela é útil para estudantes.
+
+## 🎁 O que inclui
+- **Item:** descrição e limite.
+
+## 🔐 Como acessar
+1. Passo a passo.
+
+## 💡 Dica de uso
+Como aproveitar em projetos acadêmicos.
+
+> Informações conferidas em MM/AAAA na [página oficial](https://exemplo.com).
+```
+
+O título da página na barra lateral vem do primeiro `#` do arquivo (sem o emoji). Se quiser outro, use `title:` no bloco do topo.
+
+**Regras de ouro:**
+- Sempre cite a fonte oficial e a data em que você conferiu.
+- Nada de links de pirataria ou formas de burlar a verificação estudantil.
+- Prefira links relativos entre páginas do Hub (ex: `../dev-tools/github-student-pack.md`) — eles funcionam no GitHub e no site.
+
+## 💻 Rodando o site localmente
+
+Requer [Node.js](https://nodejs.org/) 20 ou mais recente.
+
+```bash
+npm install
+npm run dev      # abre em http://localhost:3000
+npm run lint     # verifica o código
+npm run build    # gera o site estático em out/
+```
+
+## 🔄 Fluxo de contribuição (Pull Requests)
+
+1. Faça o **Fork** do projeto.
+2. Crie sua branch: `git checkout -b feat/nova-ferramenta`.
+3. Faça commits seguindo os [Commits Semânticos](https://www.conventionalcommits.org/pt-br/):
+   - `feat: adiciona Canva Pro` — conteúdo ou funcionalidade nova
+   - `fix: atualiza link do Firebase` — correção
+   - `docs: melhora o guia de contribuição` — documentação do projeto
+4. Faça o push e abra seu **Pull Request** preenchendo o checklist do template.
+
+Ao abrir o PR, duas verificações rodam sozinhas: o **build do site** e o **verificador de links**. Se alguma ficar vermelha, clique em *Details* para ver o que corrigir. Depois do merge, o site é publicado automaticamente.

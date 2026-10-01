@@ -46,6 +46,10 @@ export function getDocBySlug(slug: string[]): Doc | undefined {
   return getAllDocs().find((doc) => doc.slug.join("/") === key);
 }
 
+export function sectionTitle(folder: string) {
+  return sectionTitles[folder] ?? humanize(folder);
+}
+
 export function getNavigation(): NavSection[] {
   const docs = getAllDocs();
   const sections: NavSection[] = [
@@ -55,7 +59,7 @@ export function getNavigation(): NavSection[] {
   for (const doc of docs) {
     if (doc.slug.length === 0) continue;
     const folder = doc.slug.length > 1 ? doc.slug[0] : "";
-    const title = folder ? (sectionTitles[folder] ?? humanize(folder)) : "Outros";
+    const title = folder ? sectionTitle(folder) : "Outros";
     let section = sections.find((s) => s.title === title);
     if (!section) {
       section = { title, items: [] };
