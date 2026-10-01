@@ -1,0 +1,53 @@
+name: 💡 Sugerir nova ferramenta
+description: Conhece um benefício estudantil que ainda não está no Hub? Sugira aqui!
+title: "[SUGESTÃO] "
+labels: ["enhancement", "good first issue"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Obrigado por ajudar a comunidade! Quanto mais detalhes, mais fácil alguém transformar a sugestão em uma página.
+  - type: input
+    id: ferramenta
+    attributes:
+      label: Qual é a ferramenta?
+      placeholder: "Ex: Notion, AWS Educate, Vercel"
+    validations:
+      required: true
+  - type: dropdown
+    id: categoria
+    attributes:
+      label: Categoria
+      options:
+        - Cloud e BaaS
+        - Dev Tools
+        - APIs de IA
+        - Gestão e Design
+        - Outra
+    validations:
+      required: true
+  - type: textarea
+    id: beneficio
+    attributes:
+      label: Qual é o benefício para estudantes?
+      description: O que se ganha de graça e quais são os limites.
+    validations:
+      required: true
+  - type: textarea
+    id: acesso
+    attributes:
+      label: Como acessar?
+      description: Exige e-mail institucional? Comprovante de matrícula? Vem pelo GitHub Student Pack?
+  - type: input
+    id: link
+    attributes:
+      label: Link oficial do programa estudantil
+      placeholder: https://
+    validations:
+      required: true
+  - type: checkboxes
+    id: contribuir
+    attributes:
+      label: Quer escrever a página?
+      options:
+        - label: Sim, posso abrir o pull request com o tutorial.
