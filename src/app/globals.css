@@ -9,3 +9,21 @@ html {
 body {
   @apply bg-white text-zinc-900 antialiased dark:bg-zinc-950 dark:text-zinc-100;
 }
+
+/* Nas páginas, citações são usadas como caixas de aviso (⚠️, 💡): sem aspas e sem itálico. */
+.prose blockquote {
+  @apply rounded-r-md border-l-4 border-blue-500 bg-blue-50 py-1 font-normal not-italic dark:bg-blue-500/10;
+}
+.prose blockquote p:first-of-type::before,
+.prose blockquote p:last-of-type::after {
+  content: none;
+}
+
+/* Código no meio do texto: fundo discreto em vez das crases que o plugin de tipografia mostra. */
+.prose :not(pre) > code {
+  @apply rounded bg-zinc-100 px-1.5 py-0.5 font-medium dark:bg-zinc-800;
+}
+.prose :not(pre) > code::before,
+.prose :not(pre) > code::after {
+  content: none;
+}

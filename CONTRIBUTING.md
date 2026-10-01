@@ -16,49 +16,65 @@ Ao participar, você concorda em seguir o nosso [Código de Conduta](CODE_OF_CON
 ```
 content/                  ← todo o conteúdo do site, em Markdown
 ├── index.md              ← página inicial
-├── cloud-e-baas/         ← cada pasta vira uma seção da barra lateral
-│   └── firebase-supabase.md
-└── dev-tools/
-    └── github-student-pack.md
+├── guias/                ← cada pasta vira uma seção da barra lateral
+├── cloud-e-baas/
+├── dev-tools/
+├── apis-de-ia/
+└── gestao-e-design/
 src/                      ← código do site (Next.js)
 .github/                  ← templates de issue/PR e automações (GitHub Actions)
 ```
 
-A barra lateral do site é montada sozinha a partir das pastas de `content/`. Para criar uma página nova, basta criar o arquivo `.md` na pasta certa. Para criar uma categoria nova, crie uma pasta nova e adicione o nome de exibição dela em `src/lib/site.ts` (em `sectionTitles`).
+A barra lateral do site é montada sozinha a partir das pastas de `content/`. Para criar uma página nova, basta criar o arquivo `.md` na pasta certa. Para criar uma categoria nova, crie uma pasta nova e adicione o nome de exibição dela em `src/lib/site.ts` (em `sectionTitles` — a ordem ali é a ordem das seções no site).
 
 ## 📝 Modelo de página
 
-Toda página de ferramenta deve responder a estas perguntas:
+Toda página de ferramenta é dividida em **três níveis**, para servir de quem nunca usou a ferramenta até quem vai colocar um projeto em produção:
 
-1. **Nome e link oficial** da página de benefícios estudantis.
-2. **O que inclui gratuitamente** e quais são os limites do plano educacional.
-3. **Como acessar:** exige e-mail `.edu.br`? Foto da carteirinha? Vem pelo GitHub Student Pack?
-4. **Dica de uso:** como um estudante pode usar isso na prática (hackathons, TCC, portfólio).
+| Nível | Responde a |
+| --- | --- |
+| 🟢 **Nível 1 — Iniciante** | O que é? Quem tem direito? Como conseguir o benefício? Quais os conceitos básicos? |
+| 🟡 **Nível 2 — Intermediário** | Como construir algo pequeno, com código e comandos que funcionam? |
+| 🔴 **Nível 3 — Avançado** | Segurança, custos, automação, arquitetura e boas práticas de produção |
+
+Toda página também precisa de um **resumo dos limites gratuitos** com a fonte e a data da conferência.
 
 Copie este modelo para começar:
 
 ```markdown
 ---
-description: Uma frase resumindo o benefício (aparece nos buscadores).
+description: Uma frase resumindo a página (aparece nos buscadores e na API).
+order: 5
 ---
 
 # 🧩 Nome da Ferramenta
 
 Uma ou duas frases sobre o que é a ferramenta e por que ela é útil para estudantes.
 
-## 🎁 O que inclui
-- **Item:** descrição e limite.
-
-## 🔐 Como acessar
-1. Passo a passo.
-
-## 💡 Dica de uso
-Como aproveitar em projetos acadêmicos.
-
 > Informações conferidas em MM/AAAA na [página oficial](https://exemplo.com).
+
+## 📋 O que é gratuito
+| Item | Limite |
+| --- | --- |
+| ... | ... |
+
+## 🟢 Nível 1 — Primeiros passos
+Conceitos e como ativar o benefício.
+
+## 🟡 Nível 2 — Mão na massa
+Um projeto pequeno com código.
+
+## 🔴 Nível 3 — Produção e boas práticas
+Segurança, custos e automação.
+
+## 🔗 Links oficiais
+- [Página oficial](https://exemplo.com)
 ```
 
-O título da página na barra lateral vem do primeiro `#` do arquivo (sem o emoji). Se quiser outro, use `title:` no bloco do topo.
+- O título na barra lateral vem do primeiro `#` do arquivo (sem o emoji). Se quiser outro, use `title:` no bloco do topo.
+- `order:` define a posição da página dentro da seção (menor primeiro).
+- Os títulos `##` aparecem no índice "Nesta página", ao lado do conteúdo.
+- Textos começando com `>` viram caixas de aviso — use para ⚠️ alertas e 💡 dicas.
 
 **Regras de ouro:**
 - Sempre cite a fonte oficial e a data em que você conferiu.

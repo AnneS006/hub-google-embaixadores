@@ -20,16 +20,19 @@ O mundo da tecnologia muda rápido e os benefícios estudantis também. A ideia 
 - **☁️ Cloud & Infraestrutura:** Créditos acadêmicos, hospedagem e serviços de BaaS (Firebase, Supabase, Google Cloud).
 - **⚙️ Dev Tools & CI/CD:** O ecossistema do GitHub Student Developer Pack e ferramentas de automação.
 - **🤖 Inteligência Artificial:** Acessos e cotas para APIs (Gemini, Anthropic) para integração em projetos acadêmicos.
-- **📊 Gestão & Design:** Licenças educacionais de plataformas de gestão ágil (Monday.com, ClickUp) e design de interfaces (Canva).
+- **📊 Gestão & Design:** Licenças educacionais de design de interfaces (Figma, Canva) e organização (Notion, GitHub Projects).
 
 ## 📂 Navegue pelos Benefícios
 
+Cada página é dividida em **🟢 Nível 1 (iniciante)**, **🟡 Nível 2 (intermediário)** e **🔴 Nível 3 (avançado)** — veja as [trilhas de aprendizado](content/guias/niveis-e-trilhas.md).
+
 | Categoria | Páginas |
 | --- | --- |
-| ☁️ [Cloud e BaaS](content/cloud-e-baas) | [Firebase e Supabase](content/cloud-e-baas/firebase-supabase.md) |
-| ⚙️ [Dev Tools](content/dev-tools) | [GitHub Student Developer Pack](content/dev-tools/github-student-pack.md) |
-| 🤖 APIs de IA | Em breve — [sugira uma ferramenta](https://github.com/AnneS006/hub-google-embaixadores/issues/new/choose) |
-| 📊 Gestão e Design | Em breve — [sugira uma ferramenta](https://github.com/AnneS006/hub-google-embaixadores/issues/new/choose) |
+| 🧭 [Guias e Trilhas](content/guias) | [Níveis e trilhas](content/guias/niveis-e-trilhas.md) · [Stack para hackathon](content/guias/stack-gratuita-hackathon.md) · [Segurança de chaves](content/guias/seguranca-de-chaves-e-segredos.md) |
+| ☁️ [Cloud e BaaS](content/cloud-e-baas) | [Firebase](content/cloud-e-baas/firebase.md) · [Supabase](content/cloud-e-baas/supabase.md) · [Firebase ou Supabase?](content/cloud-e-baas/firebase-supabase.md) · [Google Cloud](content/cloud-e-baas/google-cloud.md) · [Hospedagem gratuita](content/cloud-e-baas/hospedagem-gratuita.md) |
+| ⚙️ [Dev Tools](content/dev-tools) | [GitHub Student Pack](content/dev-tools/github-student-pack.md) · [GitHub Copilot](content/dev-tools/github-copilot.md) · [GitHub Actions](content/dev-tools/github-actions.md) · [Git essencial](content/dev-tools/git-essencial.md) |
+| 🤖 [APIs de IA](content/apis-de-ia) | [Gemini API](content/apis-de-ia/gemini-api.md) · [Claude API](content/apis-de-ia/claude-api.md) · [Boas práticas com IA](content/apis-de-ia/boas-praticas-ia.md) |
+| 📊 [Gestão e Design](content/gestao-e-design) | [Figma](content/gestao-e-design/figma.md) · [Notion](content/gestao-e-design/notion.md) · [Canva](content/gestao-e-design/canva.md) · [GitHub Projects](content/gestao-e-design/github-projects.md) |
 
 ## 🏗️ Como o projeto funciona
 
@@ -72,7 +75,10 @@ Ao participar, você concorda com o nosso [Código de Conduta](CODE_OF_CONDUCT.m
 - [x] CI/CD: build, verificação de links e deploy automáticos com GitHub Actions.
 - [x] Site estático em **Next.js** gerado a partir dos arquivos `.md`.
 - [x] API pública (`/api/tools.json`) com os dados em JSON.
-- [ ] Páginas de **APIs de IA** (Gemini, Anthropic) e **Gestão e Design** (Canva, Monday.com, ClickUp).
+- [x] Conteúdo em três níveis (iniciante, intermediário, avançado) e trilhas de aprendizado.
+- [x] Páginas de **APIs de IA** (Gemini, Claude) e **Gestão e Design** (Figma, Notion, Canva, GitHub Projects).
+- [x] Índice "Nesta página" nas páginas longas.
+- [ ] Páginas de gestão ágil com planos estudantis (Monday.com, ClickUp, Trello) — [contribua!](https://github.com/AnneS006/hub-google-embaixadores/issues/new/choose)
 - [ ] Busca de ferramentas no site.
 - [ ] Filtros por tipo de requisito (e-mail institucional, carteirinha, sem verificação).
 
