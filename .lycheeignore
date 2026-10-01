@@ -1,0 +1,5 @@
+# Links para este próprio repositório e para o site do Hub: em PRs eles ainda
+# não existem na main (o arquivo ou a página está sendo criado no próprio PR).
+# Os arquivos do repo já são verificados pelos links relativos.
+^https://github\.com/AnneS006/hub-google-embaixadores/
+^https://annes006\.github\.io/hub-google-embaixadores/
